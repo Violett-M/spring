@@ -30,5 +30,8 @@ public class CarController {
         return "/car/car-info";
     }
 
+    // RequestParam can be optional
+    // PathVariable cannot be optional. It looks like endpoint
+
 
 }
