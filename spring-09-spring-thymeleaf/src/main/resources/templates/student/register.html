@@ -18,7 +18,22 @@
 <h2 th:text="${ 'Welcome ' + students.get(0).firstName} + '!'"></h2>
 
 <!--Link-->
+<a th:href="@{https://google.com}">Google</a>
+<br>
+<a th:href="@{https://cydeo.com}">Cydeo Home Page</a>
+<br>
+<a th:href="@{/student/welcome}">Welcome Page</a><br>
 
+
+<!--Adding Parameters to Link-->
+<a th:href="@{/student/welcome(id=3)}">Link with parameter</a><br> <!-- http://localhost:8080/student/welcome?id=3 -->
+
+<a th:href="@{/student/welcome(id=${students.get(0).firstName})}">Link with parameter</a>
+
+<!--Iteration-->
+<ul>
+    <li th:each="student : ${students}" th:text="${student.firstName }"></li>
+</ul><br>
 
 </body>
 </html>
